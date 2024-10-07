@@ -1,0 +1,42 @@
+/* Estilos para el menú de navegación */
+nav {
+  background-color: #f4f4f4; /* Color de fondo claro y limpio */
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un toque moderno */
+}
+
+nav ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Hace que los elementos se alineen horizontalmente */
+  justify-content: center; /* Centra los enlaces de navegación */
+}
+
+nav ul li {
+  margin: 0 15px; /* Espacio entre los enlaces */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #333; /* Color de texto oscuro pero no negro puro */
+  font-weight: 500; /* Hace que el texto sea un poco más audaz */
+  transition: color 0.3s ease; /* Transición suave en el cambio de color */
+}
+
+nav ul li a:hover {
+  color: #007bff; /* Cambia a un color azul moderno en hover */
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #333; /* Color de fondo oscuro para contraste */
+  color: #fff; /* Color de texto blanco */
+  text-align: center; /* Centra el texto */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  font-size: 0.9rem; /* Tamaño de fuente un poco más pequeño */
+}
+
+footer p {
+  margin: 5px 0; /* Margen entre párrafos en el footer */
+}

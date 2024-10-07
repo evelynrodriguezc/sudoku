@@ -56,7 +56,6 @@ function verifySudoku(){
     ];
 
     let correct = true;
-    const result = document.getElementById("result");
     
     for(let i = 0; i < 9; i++){
         for(let j = 0; j < 9; j++){
@@ -68,7 +67,7 @@ function verifySudoku(){
             }
         }
     }
-    
+    const result = document.getElementById("result");
     if(correct){
         result.innerText = "Correct! you solved the Sudoku"
     }else{

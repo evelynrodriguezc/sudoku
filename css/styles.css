@@ -1,31 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8; /* Light background color */
+    color: #333; /* Dark text color */
+    line-height: 1.6;
+}
+
+
+
+
 /* Estilos para el menú de navegación */
 nav {
-  background-color: #f4f4f4; /* Color de fondo claro y limpio */
+  background-color: #4CAF50; /* Color de fondo claro y limpio */
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un toque moderno */
+  color: white;
+  font-size: 20px;
 }
 
 nav ul {
-  list-style-type: none; /* Elimina los puntos de la lista */
-  margin: 0;
-  padding: 0;
-  display: flex; /* Hace que los elementos se alineen horizontalmente */
-  justify-content: center; /* Centra los enlaces de navegación */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 }
 
-nav ul li {
-  margin: 0 15px; /* Espacio entre los enlaces */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav ul li a {
-  text-decoration: none; /* Elimina el subrayado */
-  color: #333; /* Color de texto oscuro pero no negro puro */
-  font-weight: 500; /* Hace que el texto sea un poco más audaz */
-  transition: color 0.3s ease; /* Transición suave en el cambio de color */
+nav a:hover {
+    color: #adfeb0; /* Cambiar el color del texto al color del encabezado */
 }
 
-nav ul li a:hover {
-  color: #007bff; /* Cambia a un color azul moderno en hover */
+section {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+    margin: 20px auto;
+    max-width: 600px; /* Maximum width for the grid */
+    
+}
+
+.sudoku-grid input {
+    width: 100%;
+    height: 60px; /* Height for each input cell */
+    font-size: 24px; /* Font size for better visibility */
+    text-align: center; /* Center text in inputs */
+    border: 2px solid #4CAF50; /* Border color matching header */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.sudoku-grid input:disabled {
+    color: #555; /* Darker text for disabled cells */
+    font-weight: bold;
+}
+
+
+/* Colorear las celdas de las subgrillas 1, 3, 5, 7 y 8 */
+.sudoku-grid input:nth-child(1), /* Subgrid 1 */
+.sudoku-grid input:nth-child(2), /* Subgrid 1 */
+.sudoku-grid input:nth-child(3), /* Subgrid 1 */
+.sudoku-grid input:nth-child(10), /* Subgrid 1 */
+.sudoku-grid input:nth-child(11), /* Subgrid 1 */
+.sudoku-grid input:nth-child(12), /* Subgrid 1 */
+.sudoku-grid input:nth-child(19), /* Subgrid 1 */
+.sudoku-grid input:nth-child(20), /* Subgrid 1 */
+.sudoku-grid input:nth-child(21), /* Subgrid 1 */
+.sudoku-grid input:nth-child(7), /* Subgrid 3 */
+.sudoku-grid input:nth-child(8), /* Subgrid 3 */
+.sudoku-grid input:nth-child(9), /* Subgrid 3 */
+.sudoku-grid input:nth-child(16), /* Subgrid 3 */
+.sudoku-grid input:nth-child(17), /* Subgrid 3 */
+.sudoku-grid input:nth-child(18), /* Subgrid 3 */
+.sudoku-grid input:nth-child(25), /* Subgrid 3 */
+.sudoku-grid input:nth-child(26), /* Subgrid 3 */
+.sudoku-grid input:nth-child(27), /* Subgrid 3 */
+.sudoku-grid input:nth-child(31), /* Subgrid 7 */
+.sudoku-grid input:nth-child(32), /* Subgrid 7 */
+.sudoku-grid input:nth-child(33), /* Subgrid 7 */
+.sudoku-grid input:nth-child(40), /* Subgrid 7 */
+.sudoku-grid input:nth-child(41), /* Subgrid 7 */
+.sudoku-grid input:nth-child(42), /* Subgrid 7 */
+.sudoku-grid input:nth-child(49), /* Subgrid 7 */
+.sudoku-grid input:nth-child(50),
+.sudoku-grid input:nth-child(55),
+.sudoku-grid input:nth-child(56),
+.sudoku-grid input:nth-child(57),
+.sudoku-grid input:nth-child(61),
+.sudoku-grid input:nth-child(62),
+.sudoku-grid input:nth-child(63),
+.sudoku-grid input:nth-child(64),
+.sudoku-grid input:nth-child(65),
+.sudoku-grid input:nth-child(66),
+.sudoku-grid input:nth-child(70),
+.sudoku-grid input:nth-child(71),
+.sudoku-grid input:nth-child(72),
+.sudoku-grid input:nth-child(73),
+.sudoku-grid input:nth-child(74),
+.sudoku-grid input:nth-child(75),
+.sudoku-grid input:nth-child(79),
+.sudoku-grid input:nth-child(80),
+.sudoku-grid input:nth-child(81), /* Subgrid 7 */
+.sudoku-grid input:nth-child(51) { /* Subgrid 8 */
+    background-color: #c8e6c9; /* Color de fondo verde claro para las celdas */
+}
+
+
+
+
+
+
+.controllers {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #4CAF50; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold; /* Bold result text */
 }
 
 /* Estilos para el pie de página */

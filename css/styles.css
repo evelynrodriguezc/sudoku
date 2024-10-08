@@ -9,6 +9,9 @@ body {
     background-color: #f0f4f8; /* Light background color */
     color: #333; /* Dark text color */
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+
 }
 
 
@@ -16,14 +19,15 @@ body {
 
 /* Estilos para el menú de navegación */
 nav {
-  background-color: #4CAF50; /* Color de fondo claro y limpio */
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un toque moderno */
-  color: white;
-  font-size: 20px;
+    background-color: #4559A0; /* Color de fondo claro y limpio */
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle un toque moderno */
+    color: white;
+    font-size: 20px;
 }
 
 nav ul {
+    padding: 15px 0 0 0;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -36,7 +40,20 @@ nav a {
 }
 
 nav a:hover {
-    color: #adfeb0; /* Cambiar el color del texto al color del encabezado */
+    color: #d0d9e0f5; /* Cambiar el color del texto al color del encabezado */
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px; /* Limit width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 section {
@@ -44,8 +61,14 @@ section {
     padding: 20px;
 }
 
-h1 {
+h1, h2 {
     margin-bottom: 10px;
+    font-weight: bold;
+    color: #222;
+}
+
+section.row {
+    margin-bottom: 50px;
 }
 
 .sudoku-grid {
@@ -62,7 +85,7 @@ h1 {
     height: 60px; /* Height for each input cell */
     font-size: 24px; /* Font size for better visibility */
     text-align: center; /* Center text in inputs */
-    border: 2px solid #4CAF50; /* Border color matching header */
+    border: 2px solid #4c68af; /* Border color matching header */
     border-radius: 5px; /* Rounded corners */
 }
 
@@ -73,31 +96,31 @@ h1 {
 
 
 /* Colorear las celdas de las subgrillas 1, 3, 5, 7 y 8 */
-.sudoku-grid input:nth-child(1), /* Subgrid 1 */
-.sudoku-grid input:nth-child(2), /* Subgrid 1 */
-.sudoku-grid input:nth-child(3), /* Subgrid 1 */
-.sudoku-grid input:nth-child(10), /* Subgrid 1 */
-.sudoku-grid input:nth-child(11), /* Subgrid 1 */
-.sudoku-grid input:nth-child(12), /* Subgrid 1 */
-.sudoku-grid input:nth-child(19), /* Subgrid 1 */
-.sudoku-grid input:nth-child(20), /* Subgrid 1 */
-.sudoku-grid input:nth-child(21), /* Subgrid 1 */
-.sudoku-grid input:nth-child(7), /* Subgrid 3 */
-.sudoku-grid input:nth-child(8), /* Subgrid 3 */
-.sudoku-grid input:nth-child(9), /* Subgrid 3 */
-.sudoku-grid input:nth-child(16), /* Subgrid 3 */
-.sudoku-grid input:nth-child(17), /* Subgrid 3 */
-.sudoku-grid input:nth-child(18), /* Subgrid 3 */
-.sudoku-grid input:nth-child(25), /* Subgrid 3 */
-.sudoku-grid input:nth-child(26), /* Subgrid 3 */
-.sudoku-grid input:nth-child(27), /* Subgrid 3 */
-.sudoku-grid input:nth-child(31), /* Subgrid 7 */
-.sudoku-grid input:nth-child(32), /* Subgrid 7 */
-.sudoku-grid input:nth-child(33), /* Subgrid 7 */
-.sudoku-grid input:nth-child(40), /* Subgrid 7 */
-.sudoku-grid input:nth-child(41), /* Subgrid 7 */
-.sudoku-grid input:nth-child(42), /* Subgrid 7 */
-.sudoku-grid input:nth-child(49), /* Subgrid 7 */
+.sudoku-grid input:nth-child(1), 
+.sudoku-grid input:nth-child(2), 
+.sudoku-grid input:nth-child(3), 
+.sudoku-grid input:nth-child(10), 
+.sudoku-grid input:nth-child(11), 
+.sudoku-grid input:nth-child(12), 
+.sudoku-grid input:nth-child(19), 
+.sudoku-grid input:nth-child(20), 
+.sudoku-grid input:nth-child(21), 
+.sudoku-grid input:nth-child(7), 
+.sudoku-grid input:nth-child(8), 
+.sudoku-grid input:nth-child(9), 
+.sudoku-grid input:nth-child(16), 
+.sudoku-grid input:nth-child(17), 
+.sudoku-grid input:nth-child(18), 
+.sudoku-grid input:nth-child(25), 
+.sudoku-grid input:nth-child(26), 
+.sudoku-grid input:nth-child(27), 
+.sudoku-grid input:nth-child(31), 
+.sudoku-grid input:nth-child(32), 
+.sudoku-grid input:nth-child(33), 
+.sudoku-grid input:nth-child(40), 
+.sudoku-grid input:nth-child(41),
+.sudoku-grid input:nth-child(42), 
+.sudoku-grid input:nth-child(49), 
 .sudoku-grid input:nth-child(50),
 .sudoku-grid input:nth-child(55),
 .sudoku-grid input:nth-child(56),
@@ -116,9 +139,9 @@ h1 {
 .sudoku-grid input:nth-child(75),
 .sudoku-grid input:nth-child(79),
 .sudoku-grid input:nth-child(80),
-.sudoku-grid input:nth-child(81), /* Subgrid 7 */
-.sudoku-grid input:nth-child(51) { /* Subgrid 8 */
-    background-color: #c8e6c9; /* Color de fondo verde claro para las celdas */
+.sudoku-grid input:nth-child(81),
+.sudoku-grid input:nth-child(51) {
+    background-color: #c8cfe6b0; /* Color de fondo verde claro para las celdas */
 }
 
 
@@ -132,7 +155,7 @@ h1 {
 }
 
 button {
-    background-color: #4CAF50; /* Button color */
+    background-color: #4c60af; /* Button color */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -141,12 +164,75 @@ button {
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #4559a0; /* Darker green on hover */
 }
 
 #result {
     margin-top: 10px;
     font-weight: bold; /* Bold result text */
+}
+
+/* Card Styles */
+.card {
+    border: none; /* If you want to remove the border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better aesthetics */
+    text-align: center;
+    margin: 20px auto; /* Centering the card */
+    width: 300px; /* Adjust width of the card */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    border-radius: 50%; /* This will make the image circular */
+    width: 150px; /* Ensuring the image has a consistent size */
+    height: 150px; /* Fixed height to keep image ratio */
+    object-fit: cover; /* Ensures the image stays within the circle */
+    margin: 0 auto; /* Centering the image */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555; /* Subtle color for the text */
+}
+
+.team-member img {
+    width: 100px; /* Adjust as necessary */
+    height: 100px; /* Adjust as necessary */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+
+
+/* Accordion Styles */
+.accordion-item {
+    margin-bottom: 15px; /* Space between accordion items */
+}
+
+.accordion-button {
+    background-color: #e9ecef; /* Light background for buttons */
+    color: #333; /* Text color */
+    border: none; /* Remove border */
+}
+
+.accordion-button:focus {
+    box-shadow: none; /* Remove focus outline */
+}
+.accordion-button:hover {
+    color:white;
 }
 
 /* Estilos para el pie de página */

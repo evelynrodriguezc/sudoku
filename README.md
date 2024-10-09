@@ -1,6 +1,6 @@
 # sudoku
 
-![image](https://github.com/user-attachments/assets/9ae75bd6-5207-439c-8a90-77d44f841845)
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/5e43c6a6-84f1-43ce-953f-06bc509a0e07">
 
 
 Technologies: HTML, CSS and JavaScript.

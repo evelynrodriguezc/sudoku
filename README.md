@@ -5,4 +5,4 @@
 
 Technologies: HTML, CSS and JavaScript.
 
-You can visit the live version of the website here: [Sudoku Website](https://evelynrodriguezc.github.io/JavaScript-codes/structured-website/](https://evelynrodriguezc.github.io/sudoku/sudoku.html))
+You can visit the live version of the website here: [Sudoku Website](https://evelynrodriguezc.github.io/sudoku/)) 
